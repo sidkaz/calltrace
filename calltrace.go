@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-	"runtime/debug"
 	"time"
 )
 
@@ -31,6 +30,6 @@ func Log(s string) {
 
 func CallTrace(s string) {
 	if err := createTraceFile(); err == nil {
-		fmt.Fprintf(traceFile, "%s\n%s\n", s, string(debug.Stack()))
+		fmt.Fprintf(traceFile, "%s\n", s)
 	}
 }
