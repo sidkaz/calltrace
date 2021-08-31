@@ -22,12 +22,14 @@ func createTraceFile() (err error) {
 	return err
 }
 
+// Log is...
 func Log(s string) {
 	if err := createTraceFile(); err == nil {
 		fmt.Fprintf(traceFile, "%s\n", s)
 	}
 }
 
+// CallTrace is...
 func CallTrace(s string) {
 	if err := createTraceFile(); err == nil {
 		fmt.Fprintf(traceFile, "%s\n", s)
