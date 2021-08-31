@@ -1,3 +1,4 @@
+// Package calltrace is meant to be used solely for testing.
 package calltrace
 
 import (
